@@ -43,13 +43,13 @@
 
 /* BG IMAGES MIXIN */
 @mixin bg-image($name) {
-  background-image: url("../../images/mobile/#{$name}.jpg");
+  background-image: url("./images/mobile/#{$name}.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   @include desktop {
-    background-image: url("../../images/desktop/#{$name}.jpg");
+    background-image: url("./images/desktop/#{$name}.jpg");
   }
 }
 
