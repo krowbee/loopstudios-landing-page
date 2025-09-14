@@ -1,0 +1,38 @@
+/*BASE FONT SIZE*/
+$base: 15;
+
+/* COLORS */
+$primary-white: hsl(0, 0%, 100%);
+$primary-black: hsl(0, 0%, 0%);
+$primary-grey-200: hsl(0, 0%, 85%);
+
+@use "sass:math";
+
+/* SPACING */
+$space-100: math.div(8, $base) * 1rem;
+$space-200: math.div(16, $base) * 1rem;
+$space-300: math.div(24, $base) * 1rem;
+$space-400: math.div(32, $base) * 1rem;
+$space-500: math.div(48, $base) * 1rem;
+$space-600: math.div(64, $base) * 1rem;
+
+
+/* FONT SIZE */
+$font-100: math.div(14, $base) * 1rem;
+$font-200: math.div(16, $base) * 1rem;
+$font-300: math.div(20, $base) * 1rem;
+$font-400: math.div(24, $base) * 1rem;
+$font-500: math.div(32, $base) * 1rem;
+$font-600: math.div(72, $base) * 1rem;
+
+/* LINE HEIGHT */
+$line-height-100: 1.1;
+$line-height-200: 1.3;
+$line-height-300: 1.5;
+$line-height-400: 1.6;
+
+/*FONT WEIGHT */
+$weight-100: 100;
+$weight-200: 200;
+$weight-300: 300;
+$weight-400: 400;

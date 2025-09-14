@@ -1,0 +1,83 @@
+/* BREAKPOINT */
+@mixin mobile{
+    @media (max-width: 767px) and (max-height:935px){ @content; }
+}
+
+@mixin tablet{
+    @media (min-width: 768px) and (max-width: 1249px){ @content; }
+}
+
+@mixin mobile-tablet{
+    @media (max-width: 1249px){ @content; }
+}
+
+@mixin desktop{
+    @media (min-width: 1250px){ @content; }
+}
+
+@mixin tablet-desktop{
+    @media (min-width: 768px){ @content; }
+}
+
+/*FONT FAMILY*/
+@mixin font-alata($weight) {
+    font-family: "Alata", sans-serif;
+    font-weight: $weight;
+}
+
+@mixin font-josefin($weight) {
+    font-family: "Josefin", sans-serif;
+    font-weight: $weight;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin bg-image-cover-no-repeat($image-url){
+    background: url($image-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* BG IMAGES MIXIN */
+@mixin bg-image($name) {
+  background-image: url("../../images/mobile/#{$name}.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include desktop {
+    background-image: url("../../images/desktop/#{$name}.jpg");
+  }
+}
+
+/* LINKS MIXIN*/
+@mixin link-styles($text-color){
+    position: relative;
+    color: $text-color;
+    transition: transform ease-in-out 0.3s;
+    cursor: pointer;
+
+    &::after{
+        position: absolute;
+        content: "";
+        bottom: 5px;
+        left: 50%;
+        height: 2px;
+        border-radius: 10px;
+        width: 0;
+        transform: translateX(-50%);
+        background-color: $text-color;
+        transition: width ease-in-out 0.2s;
+        }
+
+        &:hover::after{
+            width: 100%;
+        }
+                
+        &:hover{
+            transform: scale(1.2);
+        }
+}
